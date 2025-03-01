@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Question Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Question Generator</h1>
+        
+        <div class="upload-section">
+            <h2>Upload PDF</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <input type="file" id="pdf-file" name="file" accept=".pdf">
+                    <label for="pdf-file" class="file-label">Choose a PDF file</label>
+                </div>
+                <button type="submit" id="upload-btn">Upload & Generate Questions</button>
+            </form>
+            <div id="upload-status"></div>
+        </div>
+        
+        <div class="questions-section">
+            <h2>Generated Questions</h2>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Generating questions... This may take a moment.</p>
+            </div>
+            <div id="questions-container"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
